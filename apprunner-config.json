@@ -1,0 +1,11 @@
+{
+  "ImageRepository": {
+    "ImageIdentifier": "851725585945.dkr.ecr.us-east-1.amazonaws.com/okcloudit:latest",
+    "ImageRepositoryType": "ECR",
+    "ImageConfiguration": {"Port": "5000"}
+  },
+  "AuthenticationConfiguration": {
+    "AccessRoleArn": "arn:aws:iam::851725585945:role/AppRunnerECRAccessRole"
+  },
+  "AutoDeploymentsEnabled": true
+}

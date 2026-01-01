@@ -1,0 +1,17 @@
+image: docker:latest
+services:
+  - docker:dind
+
+variables:
+  REPO: 851725585945.dkr.ecr.us-east-1.amazonaws.com/okcloudit
+
+before_script:
+  - apk add aws-cli
+  - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPO
+
+deploy:
+  script:
+    - docker build -t $REPO:latest .
+    - docker push $REPO:latest
+  only:
+    - main
