@@ -1,0 +1,10 @@
+.spyproject/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+templates/
